@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+*.sqlite3
+placement.db
+
+# VSCode / PyCharm
+.idea/
+.vscode/
+
+# Streamlit
+.streamlit/
+
+# Mac/Windows
+.DS_Store
+Thumbs.db
