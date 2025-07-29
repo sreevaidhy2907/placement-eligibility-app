@@ -33,7 +33,7 @@ An interactive web application built using **Python**, **Streamlit**, and **SQLi
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/placement-eligibility-app.git
+git clone https://github.com/sreevaidhy2907/placement-eligibility-app.git
 cd placement-eligibility-app
 
 2. Set up the environment
