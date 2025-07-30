@@ -1,5 +1,3 @@
-# run_queries.py
-
 from db_manager import DatabaseManager
 
 # Define the 10 SQL insight queries
