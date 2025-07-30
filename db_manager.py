@@ -1,5 +1,3 @@
-# db_manager.py
-
 import sqlite3
 from typing import Optional, Dict, Any
 import pandas as pd
@@ -14,10 +12,10 @@ class DatabaseManager:
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS Students (
                 student_id INTEGER PRIMARY KEY,
-                name TEXT, age INTEGER, gender TEXT,
-                email TEXT, phone TEXT,
-                enrollment_year INTEGER, course_batch TEXT,
-                city TEXT, graduation_year INTEGER
+                name VARCHAR(100), age INTEGER, gender VARCHAR(100),
+                email VARCHAR(100), phone VARCHAR(100),
+                enrollment_year INTEGER, course_batch VARCHAR(100),
+                city VARCHAR(100), graduation_year INTEGER
             )
         ''')
 
@@ -25,7 +23,7 @@ class DatabaseManager:
             CREATE TABLE IF NOT EXISTS Programming (
                 programming_id INTEGER PRIMARY KEY,
                 student_id INTEGER,
-                language TEXT, problems_solved INTEGER,
+                language VARCHAR(100), problems_solved INTEGER,
                 assessments_completed INTEGER, mini_projects INTEGER,
                 certifications_earned INTEGER, latest_project_score INTEGER,
                 FOREIGN KEY(student_id) REFERENCES Students(student_id)
@@ -48,9 +46,9 @@ class DatabaseManager:
                 placement_id INTEGER PRIMARY KEY,
                 student_id INTEGER,
                 mock_interview_score INTEGER, internships_completed INTEGER,
-                placement_status TEXT, company_name TEXT,
+                placement_status VARCHAR(100), company_name VARCHAR(100),
                 placement_package REAL, interview_rounds_cleared INTEGER,
-                placement_date TEXT,
+                placement_date VARCHAR(100),
                 FOREIGN KEY(student_id) REFERENCES Students(student_id)
             )
         ''')
