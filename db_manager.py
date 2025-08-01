@@ -1,7 +1,7 @@
 import sqlite3
 from typing import Optional, Dict, Any
 import pandas as pd
-
+# The method create_tables is mentioned here too redundantly. This is not required but in case, the SQLite_database.py was not run and there is no placement.db created, this method will create empty tables.
 class DatabaseManager:
     def __init__(self, db_path: str = "placement.db"):
         self.conn = sqlite3.connect(db_path)
